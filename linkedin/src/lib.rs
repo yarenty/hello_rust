@@ -1,6 +1,7 @@
 mod arrs;
 mod str;
 mod arg;
+mod files;
 
 pub fn min_max() {
     arrs::min_max();
@@ -25,6 +26,25 @@ pub fn str_trim(){
 
 pub fn args(){
     arg::get_args();
+}
+
+pub fn read_file() {
+    files::read();
+}
+
+
+pub fn write_file() {
+    let f = arg::get_args();
+     let s = String::from("Testing...\nJaro\nTom\nCat");
+    files::write(&f, &s);
+}
+
+
+pub fn finder() {
+    let f = arg::get_args();
+    let s = String::from("Jaro");
+    let b = files::find(&f,&s);
+    println!("{} found in {} :: {}",s,f,b);
 }
 
 #[cfg(test)]
