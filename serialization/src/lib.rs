@@ -1,7 +1,5 @@
+use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
-use serde::{Serialize, Deserialize};
-
-
 
 #[derive(Serialize, Deserialize, Debug)]
 struct Point {
@@ -24,8 +22,6 @@ pub fn ser() {
     // Prints deserialized = Point { x: 1, y: 2 }
     println!("deserialized = {:?}", deserialized);
 
-
-
     let mut map = BTreeMap::new();
     map.insert("x".to_string(), 3.0);
     map.insert("y".to_string(), 4.0);
@@ -34,7 +30,7 @@ pub fn ser() {
     // The second argument are serialization options.
     let serialized = serde_pickle::to_vec(&map, Default::default()).unwrap();
 
-    println!(" Input = {:?}",map);
+    println!(" Input = {:?}", map);
     println!(" Serialized picke = {:?}", serialized);
     // Deserialize the pickle stream back into a map.
     // Because we compare it to the original `map` below, Rust infers
@@ -43,9 +39,6 @@ pub fn ser() {
     let deserialized = serde_pickle::from_slice(&serialized, Default::default()).unwrap();
     assert_eq!(map, deserialized);
 }
-
-
-
 
 #[cfg(test)]
 mod tests {
