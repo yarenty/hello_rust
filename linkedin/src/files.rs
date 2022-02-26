@@ -4,6 +4,7 @@ use std::io::prelude::*;
 
 pub fn read() {
     
+    
     let contents = fs::read_to_string("README.md").unwrap();
     
     println!("content:: {}",contents);
