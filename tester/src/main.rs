@@ -11,4 +11,5 @@ fn main() {
     linkedin::read_file();
     linkedin::write_file();
     linkedin::finder();
+    linkedin::structs();
 }

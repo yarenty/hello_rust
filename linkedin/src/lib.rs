@@ -2,6 +2,7 @@ mod arrs;
 mod str;
 mod arg;
 mod files;
+mod structures;
 
 pub fn min_max() {
     arrs::min_max();
@@ -45,6 +46,10 @@ pub fn finder() {
     let s = String::from("Jaro");
     let b = files::find(&f,&s);
     println!("{} found in {} :: {}",s,f,b);
+}
+
+pub fn structs() {
+    structures::vehicles();
 }
 
 #[cfg(test)]
