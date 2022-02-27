@@ -12,4 +12,5 @@ fn main() {
     linkedin::write_file();
     linkedin::finder();
     linkedin::structs();
+    linkedin::threads();
 }

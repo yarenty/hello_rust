@@ -3,6 +3,7 @@ mod str;
 mod arg;
 mod files;
 mod structures;
+mod mulitthreading;
 
 pub fn min_max() {
     arrs::min_max();
@@ -52,6 +53,11 @@ pub fn structs() {
     structures::vehicles();
 }
 
+
+
+pub fn threads() {
+    mulitthreading::test_threads();
+}
 #[cfg(test)]
 mod tests {
     #[test]
