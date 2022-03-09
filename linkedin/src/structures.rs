@@ -17,6 +17,15 @@ impl Shuttle {
     fn increase_populaiton(&mut self, kids: i32) {
         self.crew_size += kids
     }
+    
+    
+    fn new ( name: &str) -> Shuttle {
+        Shuttle {
+            name: String::from(name),
+            crew_size: 6,
+            propellant: 0.0
+        }
+    } 
 }
 
 pub fn vehicles() {
@@ -32,6 +41,8 @@ pub fn vehicles() {
     };
 
     let v3 = Shuttle { ..v.clone() };
+    
+    
     println!("V1: {:?}", v);
     println!("V2: {:?}", v2);
     println!("V3: {:?}", v3);
@@ -44,5 +55,10 @@ pub fn vehicles() {
     
     v.increase_populaiton(3);
     println!("V1: {:?}", v);
+    
+    let mut vss = Shuttle::new("Essess");
+    
+    println!("Vss: {:?}", vss);
+    
     
 }
