@@ -13,6 +13,7 @@ fn main() {
     linkedin::finder();
     linkedin::structs();
     linkedin::threads();
-    
+
     linkedin::maxes();
+    linkedin::boxing();
 }

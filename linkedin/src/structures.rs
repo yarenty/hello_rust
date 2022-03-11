@@ -17,22 +17,20 @@ impl Shuttle {
     fn increase_populaiton(&mut self, kids: i32) {
         self.crew_size += kids
     }
-    
-    
-    fn new ( name: &str) -> Shuttle {
+
+    fn new(name: &str) -> Shuttle {
         Shuttle {
             name: String::from(name),
             crew_size: 6,
-            propellant: 0.0
+            propellant: 0.0,
         }
-    } 
+    }
 }
 
-
 #[derive(Debug, Clone)]
-struct Rectangle{
+struct Rectangle {
     width: f64,
-    height: f64
+    height: f64,
 } //width, height
 
 // struct Rectangle(f64, f64); //width, height
@@ -42,23 +40,17 @@ impl Rectangle {
         // &self.0 * &self.1
         &self.width * &self.height
     }
-    
+
     fn scale(&mut self, scale: f64) {
         self.width *= scale;
         self.height *= scale;
     }
-    
-    
-    fn new(width:f64, height: f64) -> Rectangle {
+
+    fn new(width: f64, height: f64) -> Rectangle {
         // Rectangle(widht, height)
-        Rectangle {
-            width, 
-            height
-        }
-        
+        Rectangle { width, height }
     }
 }
-
 
 pub fn vehicles() {
     let mut v = Shuttle {
@@ -73,8 +65,7 @@ pub fn vehicles() {
     };
 
     let v3 = Shuttle { ..v.clone() };
-    
-    
+
     println!("V1: {:?}", v);
     println!("V2: {:?}", v2);
     println!("V3: {:?}", v3);
@@ -84,24 +75,20 @@ pub fn vehicles() {
     v.add_fuel(1.0);
 
     println!("now: {}", v.propellant);
-    
+
     v.increase_populaiton(3);
     println!("V1: {:?}", v);
-    
+
     let mut vss = Shuttle::new("Essess");
-    
+
     println!("Vss: {:?}", vss);
-    
-    
+
     println!("--------------------");
-    
-    let r  = Rectangle::new(2.0,3.0);
+
+    let r = Rectangle::new(2.0, 3.0);
     println!("Rectangle: {:?}", r);
     println!("Area: {}", r.get_area());
-    let mut r2 = Rectangle::new(2.0,3.0);
+    let mut r2 = Rectangle::new(2.0, 3.0);
     r2.scale(4.0);
     println!("scaled: {:?}", r2);
-    
-    
-    
 }
