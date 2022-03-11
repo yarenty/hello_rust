@@ -1,10 +1,11 @@
 mod arg;
 mod arrs;
+mod boxing;
 mod files;
+mod generics;
 mod mulitthreading;
 mod str;
 mod structures;
-mod generics;
 
 pub fn min_max() {
     arrs::min_max();
@@ -61,9 +62,12 @@ mod tests {
     }
 }
 
-
 pub fn maxes() {
     println!("Testing generics: get max");
-    let out = generics::get_max(1,2);
+    let out = generics::get_max(1, 2);
     println!("Generic max(1,2) = {}", out);
+}
+
+pub fn boxing() {
+    boxing::boxing();
 }
