@@ -28,6 +28,38 @@ impl Shuttle {
     } 
 }
 
+
+#[derive(Debug, Clone)]
+struct Rectangle{
+    width: f64,
+    height: f64
+} //width, height
+
+// struct Rectangle(f64, f64); //width, height
+
+impl Rectangle {
+    fn get_area(&self) -> f64 {
+        // &self.0 * &self.1
+        &self.width * &self.height
+    }
+    
+    fn scale(&mut self, scale: f64) {
+        self.width *= scale;
+        self.height *= scale;
+    }
+    
+    
+    fn new(width:f64, height: f64) -> Rectangle {
+        // Rectangle(widht, height)
+        Rectangle {
+            width, 
+            height
+        }
+        
+    }
+}
+
+
 pub fn vehicles() {
     let mut v = Shuttle {
         name: String::from("Star Trek"),
@@ -59,6 +91,17 @@ pub fn vehicles() {
     let mut vss = Shuttle::new("Essess");
     
     println!("Vss: {:?}", vss);
+    
+    
+    println!("--------------------");
+    
+    let r  = Rectangle::new(2.0,3.0);
+    println!("Rectangle: {:?}", r);
+    println!("Area: {}", r.get_area());
+    let mut r2 = Rectangle::new(2.0,3.0);
+    r2.scale(4.0);
+    println!("scaled: {:?}", r2);
+    
     
     
 }
