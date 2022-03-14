@@ -24,4 +24,5 @@ fn main() {
     linkedin::test_enums();
     
     linkedin::test_errors();
+    linkedin::test_collections();
 }

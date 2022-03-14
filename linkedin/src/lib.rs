@@ -10,6 +10,7 @@ mod traits;
 mod lifetimes;
 mod enums;
 mod errors;
+mod collections;
 
 pub fn min_max() {
     arrs::min_max();
@@ -91,4 +92,8 @@ pub fn test_enums(){
 
 pub fn test_errors() {
     errors::check_files();
+}
+
+pub fn test_collections() {
+    collections::checkme();
 }
