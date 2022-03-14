@@ -16,7 +16,9 @@ fn main() {
 
     linkedin::maxes();
     linkedin::boxing();
-    
-    
+
+
     linkedin::describe();
+
+    linkedin::lifetime();
 }

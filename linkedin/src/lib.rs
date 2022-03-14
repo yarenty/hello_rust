@@ -7,6 +7,7 @@ mod mulitthreading;
 mod str;
 mod structures;
 mod traits;
+mod lifetimes;
 
 pub fn min_max() {
     arrs::min_max();
@@ -54,6 +55,7 @@ pub fn structs() {
 pub fn threads() {
     mulitthreading::test_threads();
 }
+
 #[cfg(test)]
 mod tests {
     #[test]
@@ -75,4 +77,8 @@ pub fn boxing() {
 
 pub fn describe() {
     traits::describe();
+}
+
+pub fn lifetime() {
+    lifetimes::lifetime();
 }
