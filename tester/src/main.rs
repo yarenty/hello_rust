@@ -22,4 +22,6 @@ fn main() {
 
     linkedin::lifetime();
     linkedin::test_enums();
+    
+    linkedin::test_errors();
 }
