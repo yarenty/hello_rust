@@ -21,4 +21,5 @@ fn main() {
     linkedin::describe();
 
     linkedin::lifetime();
+    linkedin::test_enums();
 }
