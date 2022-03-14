@@ -6,6 +6,7 @@ mod generics;
 mod mulitthreading;
 mod str;
 mod structures;
+mod traits;
 
 pub fn min_max() {
     arrs::min_max();
@@ -70,4 +71,8 @@ pub fn maxes() {
 
 pub fn boxing() {
     boxing::boxing();
+}
+
+pub fn describe() {
+    traits::describe();
 }
